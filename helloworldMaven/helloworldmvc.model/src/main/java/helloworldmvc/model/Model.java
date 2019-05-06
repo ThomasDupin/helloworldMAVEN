@@ -4,6 +4,8 @@ import helloworldmvc.Contract.IModel;
 
 public class Model implements IModel {
 	public String getHelloWorld() {
-		return null;
+		DAOHelloWorld yes = new DAOHelloWorld();
+		yes.readFile();
+		return yes.getHelloWorldMessage();
 	}
 }
